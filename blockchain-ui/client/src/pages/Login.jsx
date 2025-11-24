@@ -23,7 +23,6 @@ export default function Login({ onLogin }){
         <input placeholder="password" type="password" value={password} onChange={e=>setPassword(e.target.value)} />
         <button type="submit">Se connecter</button>
         {err && <div style={{color:'red'}}>{err}</div>}
-        <div style={{marginTop:8}}>Utilisateurs demo: admin/comptable/client/auditor (voir README serveur)</div>
       </form>
     </div>
   );

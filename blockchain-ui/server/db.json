@@ -31,6 +31,21 @@
   ],
   "transactions": [
     {
+      "id": "tx--raFze_2",
+      "account_id": "acc-default",
+      "counterparty": "aya",
+      "type": "sale",
+      "amount": 20000,
+      "currency": "MAD",
+      "description": "",
+      "timestamp": "2025-11-24T15:03:01.873Z",
+      "created_by": "client",
+      "blockchain_tx_hash": "0xR50lkQ81iTK6-4t6",
+      "status": "SUBMITTED",
+      "blockNumber": 1940,
+      "submittedAt": "2025-11-24T21:20:50.408Z"
+    },
+    {
       "id": "tx-le2hNram",
       "account_id": "acc-default",
       "counterparty": "ensam",
@@ -47,6 +62,26 @@
     }
   ],
   "reports": [
+    {
+      "id": "r-hj1V23cp",
+      "generated_by": "comptable",
+      "query": {
+        "from": null,
+        "to": null
+      },
+      "content": "<h1>Rapport généré (simulé)</h1><p>Résumé: 2 transactions analysées.</p>",
+      "created_at": "2025-11-24T21:29:03.955Z"
+    },
+    {
+      "id": "r-JvyiqV3-",
+      "generated_by": "comptable",
+      "query": {
+        "from": null,
+        "to": null
+      },
+      "content": "<h1>Rapport généré (simulé)</h1><p>Résumé: 2 transactions analysées.</p>",
+      "created_at": "2025-11-24T20:44:02.108Z"
+    },
     {
       "id": "r-rQJOCsi0",
       "generated_by": "comptable",

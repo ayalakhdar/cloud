@@ -31,7 +31,6 @@ export default function TxnNew({ user }){
           <select value={type} onChange={e=>setType(e.target.value)}>
             <option value="sale">Vente</option>
             <option value="purchase">Achat</option>
-            <option value="salary">Salaire</option>
           </select>
         </label>
         <input placeholder="Montant" value={amount} onChange={e=>setAmount(e.target.value)} />
