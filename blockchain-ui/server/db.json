@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": "admin",
+      "username": "admin",
+      "password": "admin",
+      "role": "ADMIN",
+      "email": "admin@example.com"
+    },
+    {
+      "id": "accountant",
+      "username": "comptable",
+      "password": "compta",
+      "role": "COMPTABLE",
+      "email": "compta@example.com"
+    },
+    {
+      "id": "client",
+      "username": "client",
+      "password": "client",
+      "role": "CLIENT",
+      "email": "client@example.com"
+    },
+    {
+      "id": "auditeur",
+      "username": "auditeur",
+      "password": "auditeur",
+      "role": "AUDITEUR",
+      "email": "auditeur@example.com"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx-le2hNram",
+      "account_id": "acc-default",
+      "counterparty": "ensam",
+      "type": "sale",
+      "amount": 10000,
+      "currency": "MAD",
+      "description": "description de transaction avec ensam ",
+      "timestamp": "2025-11-24T12:09:23.772Z",
+      "created_by": "client",
+      "blockchain_tx_hash": "0xMugZasqWsSGyio6o",
+      "status": "SUBMITTED",
+      "blockNumber": 234,
+      "submittedAt": "2025-11-24T12:09:31.262Z"
+    }
+  ],
+  "reports": [
+    {
+      "id": "r-rQJOCsi0",
+      "generated_by": "comptable",
+      "query": {
+        "from": null,
+        "to": null
+      },
+      "content": "<h1>Rapport généré (simulé)</h1><p>Résumé: 0 transactions analysées.</p>",
+      "created_at": "2025-11-24T12:08:17.833Z"
+    }
+  ]
+}
