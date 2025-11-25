@@ -14,15 +14,17 @@ export default function Navbar() {
 
   // Links based on role
   const linksByRole = {
-    CLIENT: [{ to: "/client/needs", label: "My Needs" }],
-    SUPPLIER: [
+  CLIENT: [{ to: "/client/needs", label: "My Needs" }],
+  SUPPLIER: [
     { to: "/supplier/needs", label: "Open Needs" },
     { to: "/supplier/my-offers", label: "My Offers" },
-    ],
-    ACCOUNTANT: [{ to: "/accountant/requests", label: "Requests" }],
-    ADMIN: [{ to: "/admin/users", label: "Users" }],
-  };
-
+  ],
+  ACCOUNTANT: [
+    { to: "/accountant/dashboard", label: "Dashboard" },
+    { to: "/accountant/requests", label: "Requests" }, // keep existing Requests link
+  ],
+  ADMIN: [{ to: "/admin/users", label: "Users" }],
+};
   const roleLinks = linksByRole[user.role] || [];
 
   return (

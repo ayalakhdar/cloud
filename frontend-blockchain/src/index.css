@@ -1,3 +1,5 @@
+/* index.css - No horizontal scroll, dashboard friendly */
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,6 +15,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* box-sizing so widths include padding/border (prevents accidental overflow) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* prevent horizontal scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* <-- stop horizontal scroll */
+  min-height: 100vh;
+  background-color: transparent; /* root background is set in :root if needed */
+}
+
+/* root container full-width but not forcing 100vw */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 1.5rem; /* optional comfortable padding */
+  text-align: left;
+}
+
+/* ---- LINKS ---- */
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,19 +51,14 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
+/* ---- HEADINGS ---- */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 0 0 0.5rem 0;
 }
 
+/* ---- BUTTONS ---- */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -54,15 +78,38 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* ---- UTILITY: responsive grid helper (optional) ----
+   Use on the grid container: .three-col-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+*/
+.three-col-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* ---- LIGHT MODE ---- */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
+  button {
+    background-color: #f9f9f9;
+  }
+
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+/* small screens adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  #root {
+    padding: 1rem;
   }
 }

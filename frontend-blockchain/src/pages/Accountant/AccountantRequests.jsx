@@ -85,10 +85,10 @@ export default function AccountantRequests() {
                   marginBottom: 10,
                   background:
                     offer.status === "ACCEPTED"
-                      ? "#e5ffe5"
+                      ? "#8aef8aff"
                       : offer.status === "REJECTED"
-                      ? "#ffe5e5"
-                      : "white",
+                      ? "#dd3232ff"
+                      : "grey",
                 }}
               >
                 <p>

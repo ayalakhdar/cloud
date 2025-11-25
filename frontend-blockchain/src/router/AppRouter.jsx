@@ -9,6 +9,7 @@ import MyOffers from "../pages/Supplier/MyOffers";
 import ClientNeeds from "../pages/Client/ClientNeeds";
 import SupplierNeeds from "../pages/Supplier/SupplierNeeds";
 import AccountantRequests from "../pages/Accountant/AccountantRequests";
+import AccountantDashboard from "../pages/Accountant/AccountantDashboard";
 import UsersManagement from "../pages/Admin/UsersManagement";
 
 function PrivateRoute({ children, roles }) {
@@ -64,6 +65,16 @@ export default function AppRouter() {
           }
         />
 
+        {/* Accountant */}
+        <Route 
+          path="/accountant/dashboard" 
+          element={
+            <PrivateRoute roles={["ACCOUNTANT"]}>
+                <Layout>
+                    <AccountantDashboard />
+                </Layout>
+            </PrivateRoute>
+         } />
         {/* Admin */}
         <Route
           path="/admin/users"

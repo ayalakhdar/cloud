@@ -26,13 +26,44 @@ export default function LoginPage() {
   };
 
   return (
-    <div style={{ padding: 40 }}>
-      <h1>Login</h1>
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+      width: "100%",
+    }}
+  >
+    <div
+      style={{
+        background: "#1e1e1e",
+        padding: "40px 50px",
+        borderRadius: 12,
+        width: "100%",
+        maxWidth: 400,
+        boxShadow: "0 0 20px rgba(0,0,0,0.3)",
+        textAlign: "center",
+      }}
+    >
+      <h1 style={{ marginBottom: 20 }}>Login</h1>
 
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", width: 250 }}>
-
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 12,
+        }}
+      >
         <input
-          style={{ padding: 8, marginBottom: 12 }}
+          style={{
+            padding: 12,
+            borderRadius: 6,
+            border: "1px solid #555",
+            background: "#2b2b2b",
+            color: "white",
+          }}
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -40,7 +71,13 @@ export default function LoginPage() {
 
         <input
           type="password"
-          style={{ padding: 8, marginBottom: 12 }}
+          style={{
+            padding: 12,
+            borderRadius: 6,
+            border: "1px solid #555",
+            background: "#2b2b2b",
+            color: "white",
+          }}
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -48,8 +85,22 @@ export default function LoginPage() {
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 
-        <button style={{ padding: 10 }}>Login</button>
+        <button
+          style={{
+            padding: 12,
+            borderRadius: 6,
+            background: "#646cff",
+            color: "white",
+            fontSize: "1.1em",
+            cursor: "pointer",
+            marginTop: 10,
+          }}
+        >
+          Login
+        </button>
       </form>
     </div>
-  );
+  </div>
+);
+
 }
